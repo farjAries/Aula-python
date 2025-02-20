@@ -1,0 +1,25 @@
+#Desafio 01
+nome = input('Digite seu nome: ')
+print('È um prazer te conhecer ', nome)
+#outro jeito mais para o futuro
+print('È um prazer {}' .format(nome))
+
+# Aula 06 Tipos primitivos e Saida de Dados
+# https://www.youtube.com/watch?v=hdDHg1p3YVc&list=PLvE-ZAFRgX8hnECDn1v9HNTI71veL3oW0&index=9
+#int numero inteiro (7, -4, 0, 1121)
+# float Numeros Flutantes ou real (4.5, 0.0052, -15.223) 
+# bool só aceita dois valores True e False
+# str String 'Ola', '7.5' ""
+n1 = int(input('Digite um número:'))
+n2 = int(input('Digite mais um número: '))
+s = n1 + n2
+print('A soma vale', s)
+#um outro jeito de fazer isso, sinxtase nova python
+print('A soma do valor {}'.format(s))
+#Para ver o tipo do valor coloco um type
+print(type(s))
+#desafio 02
+print('A soma entre {} e {} vai dar {}'.format(n1, n2, s))
+
+print()
+
