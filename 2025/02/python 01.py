@@ -21,5 +21,4 @@ print(type(s))
 #desafio 02
 print('A soma entre {} e {} vai dar {}'.format(n1, n2, s))
 
-print()
 
