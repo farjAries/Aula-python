@@ -1,80 +1,59 @@
-import pygame
-import random
+# Potência (**)
+print(5 ** 2)  # 5² = 25
 
-# Inicializa o Pygame
-pygame.init()
+# Divisão normal (/)
+print(5 / 2)   # 5 ÷ 2 = 2.5
 
-# Configurações da tela
-LARGURA = 800
-ALTURA = 600
-TELA = pygame.display.set_mode((LARGURA, ALTURA))
-pygame.display.set_caption("Jogo de Adivinhação")
+# Divisão inteira (//)
+print(5 // 2)  # 5 ÷ 2 = 2 (descarta a parte decimal)
 
-# Cores
-BRANCO = (255, 255, 255)
-PRETO = (0, 0, 0)
-VERDE = (0, 255, 0)
-VERMELHO = (255, 0, 0)
+# Módulo (%)
+print(5 % 2)   # Resto de 5 ÷ 2 = 1
 
-# Fonte
-FONTE = pygame.font.Font(None, 36)
+# Parênteses () → Sempre resolvidos primeiro.
+# Exponenciação ** → Potência.
+# Multiplicação *, Divisão /, Divisão inteira //, e Módulo % → São resolvidos da esquerda para a direita.
+# Soma + e Subtração - → São resolvidos por último, da esquerda para a direita.
 
-# Função para mostrar texto na tela
-def mostrar_texto(texto, x, y, cor=PRETO):
-    superficie_texto = FONTE.render(texto, True, cor)
-    TELA.blit(superficie_texto, (x, y))
+resultado = 5 + 2 * 3  # Multiplicação antes da soma
+print(resultado)  # 11 (pois 2 * 3 = 6, depois 5 + 6 = 11)
 
-def jogo_adivinhacao():
-    numero_secreto = random.randint(1, 5)
-    tentativas = 0
-    acertou = False
-    palpite = ""
-    mensagem = "Estou pensando em um número entre 1 e 100. Tente adivinhar!"
+resultado = (5 + 2) * 3  # Parênteses antes da multiplicação
+print(resultado)  # 21 (pois 5 + 2 = 7, depois 7 * 3 = 21)
 
-    rodando = True
-    while rodando:
-        TELA.fill(BRANCO)  # Limpa a tela com a cor branca
+resultado = 2 ** 3 * 4  # Exponenciação antes da multiplicação
+print(resultado)  # 32 (pois 2³ = 8, depois 8 * 4 = 32)
 
-        # Mostra a mensagem e o número de tentativas
-        mostrar_texto(mensagem, 50, 50)
-        mostrar_texto(f"Tentativas: {tentativas}", 50, 100)
-        mostrar_texto(f"Seu palpite: {palpite}", 50, 150)
+resultado = 10 // 3 + 1  # Divisão inteira antes da soma
+print(resultado)  # 4 (pois 10 // 3 = 3, depois 3 + 1 = 4)
 
-        # Atualiza a tela
-        pygame.display.flip()
+nome = input('Qual é o seu nome? ')
+print('Prazer em te conhecer, {:20}!'.format(nome))
+print('Prazer em te conhecer, {:<20}!'.format(nome))
+print('Prazer em te conhecer, {:>20}!'.format(nome))
+print('Prazer em te conhecer, {:=>20}!'.format(nome))
+print('Prazer em te conhecer! {:^20}' .format(nome))
 
-        # Verifica eventos
-        for evento in pygame.event.get():
-            if evento.type == pygame.QUIT:
-                rodando = False
-            elif evento.type == pygame.KEYDOWN:
-                if evento.key == pygame.K_RETURN:  # Quando o jogador pressiona Enter
-                    try:
-                        palpite_int = int(palpite)
-                        tentativas += 1
+#Desafio 5
+n1 = int(input('Digite um valor: '))
+sucessor = n1 + 1 
+antecessor = n1 -1
+print('o sucessor de {} é {} e antecessor é {}'.format(n1, sucessor, antecessor))
 
-                        if palpite_int < numero_secreto:
-                            mensagem = "Muito baixo! Tente novamente."
-                        elif palpite_int > numero_secreto:
-                            mensagem = "Muito alto! Tente novamente."
-                        else:
-                            acertou = True
-                            mensagem = f"Parabéns! Você acertou em {tentativas} tentativas!"
-                    except ValueError:
-                        mensagem = "Por favor, digite um número válido."
-                    palpite = ""  # Limpa o palpite após o Enter
-                elif evento.key == pygame.K_BACKSPACE:  # Permite apagar o palpite
-                    palpite = palpite[:-1]
-                else:
-                    palpite += evento.unicode  # Adiciona o caractere digitado ao palpite
-
-        if acertou:
-            mostrar_texto(mensagem, 50, 200, VERDE)
-            pygame.display.flip()
-            pygame.time.wait(3000)  # Espera 3 segundos antes de fechar
-            rodando = False
-
-    pygame.quit()
-
-if __name__ == "__main__":
-    jogo_adivinhacao()
+#Desafio 6
+n2 = int(input("Digite um Numero:"))
+dobro = n2 * 2
+triplo = n2 * 3
+rquadrada = n2 ** n2
+print("O numero {}, o Dobro é{} o triblo é {} e a raiz quadrada é {}".format(n2, dobro, triplo, rquadrada))
+#Desafio 7
+nota1 = float(input("Qual a primeira nota do aluno? "))
+nota2 = float(input("Qual a segunda nota do aluno? "))
+media = (nota1 + nota2) / 2
+print("A primeira nota do aluno é {}, a segunda nota do aluno é {}, e a media dele é {}".format(nota1, nota2, media))
+#Desafio 08
+metros = float(input("Quantos metros: "))
+cm = metros * 100
+mm = metros *1000
+print(f"{metros}Metros convertido em centimetros é {cm:.0f} e em milimetro é {mm:.0f}")
+#um novo jeito de fazer o print é colocar em vez de print("{} bla bla".format(variavel)) posso so colocar print(f"{variavel} bla bla")
