@@ -1,11 +1,16 @@
+
 # Potência (**)
 print(5 ** 2)  # 5² = 25
 
 # Divisão normal (/)
 print(5 / 2)   # 5 ÷ 2 = 2.5
+#Desafio 10
+dinheiro = float(input("Quanto dinhero voce tem na carteira? "))
+dolar = float(input("quanto esta a cotaçao do dolar? "))
 
 # Divisão inteira (//)
 print(5 // 2)  # 5 ÷ 2 = 2 (descarta a parte decimal)
+valor = dinheiro /  dolar
 
 # Módulo (%)
 print(5 % 2)   # Resto de 5 ÷ 2 = 1
@@ -57,3 +62,40 @@ cm = metros * 100
 mm = metros *1000
 print(f"{metros}Metros convertido em centimetros é {cm:.0f} e em milimetro é {mm:.0f}")
 #um novo jeito de fazer o print é colocar em vez de print("{} bla bla".format(variavel)) posso so colocar print(f"{variavel} bla bla")
+print(f"com {dinheiro} voce pode comprar US${valor:.2f}")
+# Desafio 10
+reais = float(input("Quantos reais você quer converter? "))
+cotacao = float(input("Qual a cotação atual do dólar? "))
+
+dolares = reais / cotacao
+
+print(f"Com R${reais:.2f}, você terá aproximadamente ${dolares:.2f} dólares.")
+
+# Desafio 11
+largura = float(input("Quanto de largura tem:"))
+altura = float(input("Quanto de altura tem: "))
+metros = largura * altura
+litros = metros / 2
+print(f"Sua parede tem {largura}X{altura} e sua area é de {metros}m Para pintar essa parede, voce precisa de {litros}Litros de tinta")
+
+# Desafio 12 
+valor = float(input("Qual o valor? "))
+Desconto = valor * 5 / 100
+sub = valor - Desconto
+print(f"O Produto que custava R${valor} , na promoçao vai custar {sub:.2f}")
+
+#Desafio 13
+salario = float(input("Qual o salario do Funcionario: R$"))
+aumento = salario * 15 / 100
+total = salario + aumento
+print(f"O Funcionario que ganhava {salario} agora com o aumento de 15% esta ganhando {total:.2f}")
+
+#Desafio 14
+c = float(input("Informe a temperatura em celcius: "))
+f = (c * 1.8 ) + 32
+print(f"A temperatura de {c}C corresponde a {f:.2f}F")
+#Desfio 15
+dias = float(input("Qunatos dias o carro foi alugado? "))
+km = float(input("Quantos km foi percorrido")) 
+final = (dias  * 60) + (km * 0.15)
+print(f"O total a pagar é {final:.2f}")
