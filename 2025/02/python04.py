@@ -19,4 +19,16 @@
 #frase.upper() vai dexar a frase em maiusculo
 #frase.capitalize() joga todos para minusculo menos a Primeira letra
 #frase.title() ele analiza quantas palavras tem e coloca em minusculo
-#frase.strip() ele vai remover os espaços no começo da frase e no final os espaços inuteis e posso complementar com frase.rstrip o r é de right ent ele so vai tirar os espaços da direita
+#frase.strip() ele vai remover os espaços no começo da frase e no final os espaços inuteis e posso complementar com frase.rstrip o r é de right ent ele so vai tirar os espaços da direita, lemrando que o l é de left 
+
+########################## DIVISAO ############################################################
+
+#frase.split() ele vai dividir a frase em palavras e vai criar uma lista com as palavras separadas 
+#'-'.join(frase) ele vai juntar as palavras e colocar o que eu quiser entre elas
+
+########################## PRATICA ###########################################################
+    #C U R S O   E M    V I  D  E  O      P  Y  T  H  O  N
+    #1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21
+
+frase = 'Sua Impressora Térmica Parou de Funcionar'
+print(frase.upper())
