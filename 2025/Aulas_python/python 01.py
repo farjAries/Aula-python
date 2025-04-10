@@ -13,7 +13,7 @@ print('È um prazer {}' .format(nome))
 n1 = int(input('Digite um número:'))
 n2 = int(input('Digite mais um número: '))
 s = n1 + n2
-print('A soma vale', s)sss
+print('A soma vale', s)
 #um outro jeito de fazer isso, sinxtase nova python
 print('A soma do valor {}'.format(s))
 #Para ver o tipo do valor coloco um type
